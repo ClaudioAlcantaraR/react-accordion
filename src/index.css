@@ -1,13 +1,68 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: #232323 !important;
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.content-container {
+  background-color: rgba(57, 57, 57, 50%);
+  border: 1px solid #515151;
+  padding: 2rem;
+}
+
+.logo-silestone {
+  max-width: 190px;
+}
+
+.question-container {
+  padding: 10px 0 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.question-container div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+}
+
+.question-container h5 {
+  padding-right: 1rem;
+}
+
+.btn.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+@media only screen and (min-width: 768px) {
+  .main-container {
+    padding-top: 4rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .content-container {
+    padding: 2rem 0.5rem;
+  }
+
+  .content-container .brand-container {
+    padding-bottom: 2rem;
+  }
+
+  .content-container h1 {
+    text-align: center;
+    font-size: 36px;
+  }
+
+  .content-container .brand-container img {
+      max-width: 130px;
+  }
+
+  .content-container .brand-container div {
+      text-align: center;
+  }
 }

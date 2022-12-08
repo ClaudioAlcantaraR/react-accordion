@@ -1,24 +1,34 @@
 import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import data from './data';
+import SingleQuestion from './Question';
+/* Bootstrap */
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function App() {
+  const [questions] = useState(data);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Container className="main-container">
+        <Row className="content-container">
+          <Col md={4} className="brand-container">
+            <h1 className="mb-4">FAQs</h1>
+              <div>
+                <img src={logo} className="logo-silestone" alt="Silestone" />
+              </div>  
+          </Col>
+          <Col>
+            {questions.map((question) => {
+              return (
+                <SingleQuestion key={question.id} {...question}></SingleQuestion>
+              );
+            })}
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 }
 
