@@ -6,6 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ![](react-accordion.JPG)
 
+Live demo: https://shiny-capybara-4c028d.netlify.app/
+
 ## Available Scripts
 
 In the project directory, you can run:
